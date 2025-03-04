@@ -4,6 +4,7 @@ A system for generating comprehensive, balanced timelines for topics by gatherin
 
 ## To-Do
 
+- [ ] Find a better alternative to DOMAIN_PATTERNS inside article_utils.py
 - [ ] Refactor timelineGenerator.py and updateTimelineEvents.py for readability
 - [ ] Improve perspective analysis with more nuanced political spectrum
 - [ ] Create documentation for API endpoints
