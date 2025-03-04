@@ -2,6 +2,13 @@
 
 A system for generating comprehensive, balanced timelines for topics by gathering and analyzing news articles from GNews API.
 
+## To-Do
+
+- [ ] Refactor timelineGenerator.py and updateTimelineEvents.py for readability
+- [ ] Improve perspective analysis with more nuanced political spectrum
+- [ ] Create documentation for API endpoints
+- [ ] Add support for timeline version control
+
 ## Project Structure
 
 The project is organized into several modules:
@@ -34,17 +41,14 @@ The project is organized into several modules:
 ```python
 from timelineGenerator import TimelineGenerator
 
-# Initialize the generator
 generator = TimelineGenerator()
 
-# Generate a timeline for a topic
 topic_statement = "US-China Trade War"
 background_info = """The US and China have been engaged in a trade war since 2018,
 with both sides imposing tariffs on hundreds of billions of dollars of goods."""
 
 timeline = generator.generate(topic_statement, background_info)
 
-# Access the generated timeline
 print(f"Generated {len(timeline.timeline)} events")
 ```
 
@@ -53,17 +57,14 @@ print(f"Generated {len(timeline.timeline)} events")
 ```python
 from updateTimelineEvents import TimelineUpdater
 
-# Initialize the updater
 updater = TimelineUpdater(timeline_file="timeline.json")
 
-# Update the timeline with new events
 topic_statement = "US-China Trade War"
 background_info = """The US and China have been engaged in a trade war since 2018,
 with both sides imposing tariffs on hundreds of billions of dollars of goods."""
 
 updated_timeline = updater.generate_new_events(topic_statement, background_info)
 
-# Access the updated timeline
 print(f"Timeline now has {len(updated_timeline.timeline)} events")
 ```
 
